@@ -54,7 +54,7 @@ const Login = () => {
                       <input data-cy="inputPassword" ref={passwordRef} type="password" name="password" placeholder="Tu Password" className="mt-2 w-full p-3 bg-gray-100"/>
                   </div>
                 
-                  <input data-cy="inputSubmitSession" type="submit" value="Iniciar Sesión" className="bg-indigo-600 hover:bg-indigo-800 text-white w-full mt-5 p-3 uppercase font-bold cursor-pointer" />
+                  <input data-cy="inputSubmitSession" type="submit" value="Iniciar Sesión" className="bg-indigo-600 rounded-md hover:bg-indigo-800 text-white w-full mt-5 p-3 uppercase font-bold cursor-pointer" />
                 </form>
           </div>
           <nav className="mt-5">

@@ -9,6 +9,17 @@ import OrdersOut from './views/OrdersOut';
 import OutofStockProducts from './views/OutofStockProducts';
 import Products from './views/Products';
 import Register from './views/Register';
+import Users from './views/Users';
+import Warehouse from './views/Warehouse';
+import ProductsWarehouse from './views/ProductsWarehouse';
+import Formulations from './views/Formulations';
+import CreateUser from './views/create/CreateUser';
+import CreateMovement from './views/create/CreateMovement';
+import CreateDetailedMovement from './views/create/CreateDetailedMovement';
+import CreateRawMaterials from './views/create/CreateRawMaterials';
+import CreateFinishedProduct from './views/create/CreateFinishedProduct';
+
+
 
 const router = createBrowserRouter([
         {
@@ -55,8 +66,51 @@ const router = createBrowserRouter([
                 {
                     path: '/admin/products-out',
                     element: <OutofStockProducts/>
+                },
+                {
+                    path: '/admin/users',
+                    element: <Users/>
+                },
+                {
+                    path: '/admin/warehouse',
+                    element: <Warehouse/>
+                },
+                {
+                    path: '/admin/products-warehouse',
+                    element: <ProductsWarehouse/>
+                },
+                {
+                    path: '/admin/formulations',
+                    element: <Formulations/>
                 }
 
+            ]
+        },
+        {
+            path: '/admin/create',
+            element: <AdminLayout/>, 
+            children: [
+                {
+                    path: '/admin/create/users',
+                    element: <CreateUser/>
+                },
+                {
+                    path: '/admin/create/movement-warehouse',
+                    element: <CreateMovement/>
+                },
+                {
+                    path: '/admin/create/detailed-movement',
+                    element: <CreateDetailedMovement/>
+                },
+                {
+                    path: '/admin/create/finished-product',
+                    element: <CreateFinishedProduct/>
+                },
+                {
+                    path: '/admin/create/material',
+                    element: <CreateRawMaterials/>
+                },
+               
             ]
         }
 ]);

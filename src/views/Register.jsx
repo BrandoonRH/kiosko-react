@@ -63,7 +63,7 @@ const Register = () => {
                 <label data-cy="labelPasswordConfirmation" htmlFor="password_confirmation" className="text-slate-600">Repite tu Password:</label>
                 <input data-cy="inputPasswordConfirmation" ref={passwordConfirmationRef} type="password" name="password_confirmation" placeholder="Vuelve a ingresar tu password" className="mt-2 w-full p-3 bg-gray-100"/>
             </div>
-              <input data-cy="inputSubmit" type="submit" value="Crear Cuenta" className="bg-indigo-600 hover:bg-indigo-800 text-white w-full mt-5 p-3 uppercase font-bold cursor-pointer" />
+              <input data-cy="inputSubmit" type="submit" value="Crear Cuenta" className="rounded-md bg-indigo-600 hover:bg-indigo-800 text-white w-full mt-5 p-3 uppercase font-bold cursor-pointer" />
         </form>
         </div>
         <nav className="mt-5">

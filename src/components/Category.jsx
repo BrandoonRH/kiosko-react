@@ -4,7 +4,7 @@ import useKiosko from "../hooks/useKiosko";
 const Category = ({category}) => {
       const {handleClickCategory, categoryCurrent} = useKiosko();
 
-    const {icono, id, nombre} =category;
+    const {icono, id, nombre} = category;
       
   return (
     <div className={` ${categoryCurrent.id === id ? "bg-amber-400" : "bg-white"} flex items-center gap-4 border w-full p-3 hover:bg-amber-400 cursor-pointer`}>
