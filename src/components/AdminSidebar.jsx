@@ -40,7 +40,7 @@ const AdminSidebar = () => {
         <div className="my-5 px-5">
             <button
                     type="button"
-                    className='text-center rounded-md bg-red-500 w-full p-3 font-bold text-white truncate'
+                    className='text-center hover:bg-red-800 cursor-pointer rounded-md bg-red-500 w-full p-3 font-bold text-white truncate'
                     onClick={logout}
             >
                 Cerrar Sesión

@@ -19,6 +19,8 @@ import CreateDetailedMovement from './views/create/CreateDetailedMovement';
 import CreateRawMaterials from './views/create/CreateRawMaterials';
 import CreateFinishedProduct from './views/create/CreateFinishedProduct';
 
+/** Dashboards*/
+import DashboardWarehouse from './views/dashboards/DashboardWarehouse';
 
 
 const router = createBrowserRouter([
@@ -112,7 +114,19 @@ const router = createBrowserRouter([
                 },
                
             ]
-        }
+        }, 
+        {
+            path: '/admin/dasboard',
+            element: <AdminLayout/>, 
+            children: [
+                {
+                    path: '/admin/dasboard/warehouse-movements',
+                    element: <DashboardWarehouse/>
+                },
+            
+
+            ]
+        },
 ]);
 
 export default router; 
