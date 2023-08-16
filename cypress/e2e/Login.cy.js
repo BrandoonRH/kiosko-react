@@ -18,7 +18,7 @@ describe('<Login/>', () => {
     cy.get('[data-cy=paragraphLogin]')
       .should('exist')
       .invoke('text')
-      .should('equal', 'Para realizar un pedido, Inicia Sesión'); 
+      .should('equal', 'Para Administrar Master Burguer, Inicia Sesión'); 
 
     cy.get('[data-cy=labelEmail]')
       .should('exist')

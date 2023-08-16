@@ -31,7 +31,7 @@ const Login = () => {
   return (
     <>
       <h1 data-cy="title" className="text-4xl font-black">Iniciar Sesión</h1>
-      <p data-cy="paragraphLogin">Para realizar un pedido, Inicia Sesión</p>
+      <p data-cy="paragraphLogin">Para Administrar Master Burguer, Inicia Sesión</p>
       {loading ? (
          <div className="bg-white shadow-md rounded-md mt-10 px-5 py-10">
               <Spinner text="Redirigiendo..."/>

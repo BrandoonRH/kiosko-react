@@ -13,14 +13,20 @@ import Users from './views/Users';
 import Warehouse from './views/Warehouse';
 import ProductsWarehouse from './views/ProductsWarehouse';
 import Formulations from './views/Formulations';
+
+
+/**Views Create Register */
 import CreateUser from './views/create/CreateUser';
 import CreateMovement from './views/create/CreateMovement';
-import CreateDetailedMovement from './views/create/CreateDetailedMovement';
+//import CreateDetailedMovement from './views/create/CreateDetailedMovement';
 import CreateRawMaterials from './views/create/CreateRawMaterials';
 import CreateFinishedProduct from './views/create/CreateFinishedProduct';
+import CreateFormulation from './views/create/CreateFormulation';
 
 /** Dashboards*/
 import DashboardWarehouse from './views/dashboards/DashboardWarehouse';
+import DashboardProducts from './views/dashboards/DashboardProducts';
+import DashboardFormulations from './views/dashboards/DashboardFormulations';
 
 
 const router = createBrowserRouter([
@@ -100,10 +106,10 @@ const router = createBrowserRouter([
                     path: '/admin/create/movement-warehouse',
                     element: <CreateMovement/>
                 },
-                {
+               /* {
                     path: '/admin/create/detailed-movement',
                     element: <CreateDetailedMovement/>
-                },
+                },*/
                 {
                     path: '/admin/create/finished-product',
                     element: <CreateFinishedProduct/>
@@ -112,7 +118,10 @@ const router = createBrowserRouter([
                     path: '/admin/create/material',
                     element: <CreateRawMaterials/>
                 },
-               
+                {
+                    path: '/admin/create/formulation',
+                    element: <CreateFormulation/>
+                },
             ]
         }, 
         {
@@ -123,6 +132,14 @@ const router = createBrowserRouter([
                     path: '/admin/dasboard/warehouse-movements',
                     element: <DashboardWarehouse/>
                 },
+                {
+                    path: '/admin/dasboard/products-warehouse',
+                    element:   <DashboardProducts/>
+                },
+                {
+                    path: '/admin/dasboard/formulations',
+                    element:  <DashboardFormulations/>
+                }
             
 
             ]

@@ -10,7 +10,9 @@ const Sidebar = () => {
   return (
     <aside className='md:w-72'>
         <div className="p-4">
-           <img src="/img/logo-burguers.svg" alt="Imagen Logotipo" className="w-44 rounded-full"/>
+            <Link to="/admin" className="rounded-full">
+                <img src="/img/logo-master-burguer.svg" alt="Imagen Logotipo" className="w-48 m-auto rounded-full border-4 border-black "/>
+            </Link>
         </div>
         <p data-cy="nameUserHome" className='my-5 text-xl text-center font-bold text-indigo-700'>Hola: {user?.name}</p>
         {user?.admin ? (

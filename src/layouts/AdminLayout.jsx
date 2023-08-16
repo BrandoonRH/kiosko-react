@@ -1,7 +1,7 @@
 import { Outlet } from "react-router-dom"
 import AdminSidebar from "../components/AdminSidebar"
 import { useAuth } from "../hooks/useAuth"
-
+import { ToastContainer } from "react-toastify"
 
 const AdminLayout = () => {
 
@@ -13,7 +13,7 @@ const AdminLayout = () => {
                 <main className='flex-1 h-screen overflow-y-scroll bg-gray-100 p-3'>
                   <Outlet/>
                 </main>
-              
+              <ToastContainer/>
     </div>
   )
 }

@@ -13,7 +13,7 @@ describe('<Register/>', () => {
     cy.get('[data-cy=paragraphRegister]')
       .should('exist')
       .invoke('text')
-      .should('equal', 'Crea tu cuenta llenando el formulario')
+      .should('equal', 'Crea tu cuenta en Master Burguer llenando el formulario')
       .should('not.equal', 'Registrate') 
       
     cy.get('[data-cy=formRegister]')

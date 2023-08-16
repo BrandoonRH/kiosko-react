@@ -3,11 +3,14 @@ import Add from "../components/Add"
 import UsersData from "../data/UsersData"
 import User from "../components/User"
 import {HiOutlineUsers, HiOutlineChevronDoubleRight} from "react-icons/hi"
-
+import useGetUsers from "../hooks/useGetUsers"
 
 const Users = () => {
 
    //TODO Logica de la API
+
+   const {data} = useGetUsers(); 
+   console.log(data); 
   
     return (
       <div>
@@ -19,11 +22,7 @@ const Users = () => {
             Administra los usuarios del sistema 
           </p>
 
-          <Link to="/admin/dasboard/" className="text-2xl flex justify-between items-center bg-gray-500 p-2 text-white font-bold rounded-lg hover:bg-gray-200 hover:underline hover:text-black transition-all duration-300 ">
-              <p>Ir al Dashboard</p>
-              <HiOutlineChevronDoubleRight/>
-          </Link>
-
+      
 
         {/*Usuario*/}
         <div className="container mx-auto border border-red-500 p-10">
@@ -39,24 +38,20 @@ const Users = () => {
                     <thead>
                       <tr>
                         <th className="border border-slate-600 bg-gray-300">ID</th>
-                        <th className="border border-slate-600 bg-gray-300 ">Nombre(s)</th>
-                        <th className="border border-slate-600 bg-gray-300">Apellido(s)</th>
+                        <th className="border border-slate-600 bg-gray-300 ">Nombre</th>
                         <th className="border border-slate-600 bg-gray-300 ">Usuario</th>
-                        <th className="border border-slate-600 bg-gray-300 ">E-mail</th>
                         <th className="border border-slate-600 bg-gray-300">Acciones</th>
                       </tr>
                     </thead>
                     <tbody className="">
 
                     {
-                      UsersData.map((user) => (
+                      data?.map((user) => (
                         <User 
                           key={user.id}
                           id={user.id}
-                          nombres={user.nombres}
-                          apellidos={user.apellidos}
+                          nombre={user.nombre}
                           usuario={user.usuario}
-                          email={user.email}
                         />
                       ))
                     }                     

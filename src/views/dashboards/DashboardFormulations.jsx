@@ -1,14 +1,12 @@
 import React, { useRef } from 'react';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
-import {HiChartBar} from "react-icons/hi"
-import { GraphicUser } from "../../components/graphics/Warehousemovements/Graphicbar"
-import { Graphicline } from "../../components/graphics/Warehousemovements/Graphicline"
-import { Areapolar } from "../../components/graphics/Warehousemovements/Areapolar"
+import {HiChartBar} from "react-icons/hi";
+import { GraphicFormulationsBar, options, data} from "../../components/graphics/Formulations/GraphicFormulationsBar";
+import { GraphicFormulationsLine } from "../../components/graphics/Formulations/GraphicFormulationsLine";
+import { GraphicFormulationsPolar } from "../../components/graphics/Formulations/GraphicFormulationsPolar";
 
-
-const DashboardWarehouse = () => {
-
+const DashboardFormulations = () => {
   const graphicRefBar = useRef(null);
   const graphicRefLine = useRef(null);
   const graphicRefPolar = useRef(null);
@@ -16,7 +14,7 @@ const DashboardWarehouse = () => {
   const downloadPDF = async () => {
       const doc = new jsPDF();
 
-      doc.text('Dashboard Almacén', 20, 20);
+      doc.text('Dashboard Formulaciones', 20, 20);
       doc.text('Reporte en PDF de las Gráficas ', 20, 30);
 
 
@@ -41,11 +39,11 @@ const DashboardWarehouse = () => {
   return (
     <div>
         <div className='flex  items-center gap-2'>
-            <h1 className='text-4xl font-black'>Dashboard Almacén</h1>
+            <h1 className='text-4xl font-black'>Dashboard Formulaciones</h1>
             <HiChartBar className="text-gray-500" size={40}/>
         </div>
         <p className='text-2xl my-10'>
-           Visualiza el cuadro de mando de los movieminto en almacén desde aquí
+        Visualiza el cuadro de mando de las Formulaciones
         </p>
 
         <button onClick={downloadPDF} 
@@ -54,20 +52,19 @@ const DashboardWarehouse = () => {
         </button>
 
         <div ref={graphicRefBar}>
-           <GraphicUser key="1"/>
+          <GraphicFormulationsBar options={options} data={data} />
         </div>
 
         <div className="container flex max-w-lg items-center mt-10">
             <div ref={graphicRefLine}>
-                <Graphicline/>
+              <GraphicFormulationsLine/>
             </div>
             <div ref={graphicRefPolar}>
-                <Areapolar/>
+              <GraphicFormulationsPolar/>
             </div>
         </div>
-
     </div>
   )
 }
 
-export default DashboardWarehouse
+export default DashboardFormulations

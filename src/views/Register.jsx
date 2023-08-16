@@ -30,7 +30,7 @@ const Register = () => {
   return (
     <>
       <h1 data-cy="titleRegister" className="text-4xl font-black">Crea tu Cuenta</h1>
-      <p data-cy="paragraphRegister" >Crea tu cuenta llenando el formulario</p>
+      <p data-cy="paragraphRegister" >Crea tu cuenta en Master Burguer llenando el formulario</p>
 
       {loading ? (
          <div className="bg-white shadow-md rounded-md mt-10 px-5 py-10">

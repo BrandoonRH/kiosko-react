@@ -19,7 +19,7 @@ const  WarehouseMovements = [
         usuario: 2
     },
     {
-        id: 23,
+        id: 25,
         folio: "873LKFM4",
         concepto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu nibh quis eros egestas tempus ac id dolor. Praesent est tortor, ultricies sed rhoncus vitae, porttitor sit amet lectus.",
         total_costo: 232.50,
@@ -28,7 +28,7 @@ const  WarehouseMovements = [
         usuario: 3
     },
     {
-        id: 25,
+        id: 26,
         folio: "8433LKFM4",
         concepto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu nibh quis eros egestas tempus ac id dolor. Praesent est tortor, ultricies sed rhoncus vitae, porttitor sit amet lectus.",
         total_costo: 432.20,
@@ -37,7 +37,7 @@ const  WarehouseMovements = [
         usuario: 2
     },
     {
-        id: 26,
+        id: 27,
         folio: "873LKFLM4",
         concepto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu nibh quis eros egestas tempus ac id dolor. Praesent est tortor, ultricies sed rhoncus vitae, porttitor sit amet lectus.",
         total_costo: 675.50,
@@ -46,7 +46,7 @@ const  WarehouseMovements = [
         usuario: 4
     },
     {
-        id: 27,
+        id: 28,
         folio: "864LKFM4",
         concepto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu nibh quis eros egestas tempus ac id dolor. Praesent est tortor, ultricies sed rhoncus vitae, porttitor sit amet lectus.",
         total_costo: 632.50,
@@ -55,7 +55,7 @@ const  WarehouseMovements = [
         usuario: 6
     },
     {
-        id: 28,
+        id: 29,
         folio: "635LKJN",
         concepto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu nibh quis eros egestas tempus ac id dolor. Praesent est tortor, ultricies sed rhoncus vitae, porttitor sit amet lectus.",
         total_costo: 432.60,
@@ -64,7 +64,7 @@ const  WarehouseMovements = [
         usuario: 2
     },
     {
-        id: 29,
+        id: 30,
         folio: "845KDJNLKFM4",
         concepto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu nibh quis eros egestas tempus ac id dolor. Praesent est tortor, ultricies sed rhoncus vitae, porttitor sit amet lectus.",
         total_costo: 82.80,
@@ -73,7 +73,7 @@ const  WarehouseMovements = [
         usuario: 4
     },
     {
-        id: 30,
+        id: 31,
         folio: "8FKLJM4",
         concepto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu nibh quis eros egestas tempus ac id dolor. Praesent est tortor, ultricies sed rhoncus vitae, porttitor sit amet lectus.",
         total_costo: 221.80,
@@ -82,7 +82,7 @@ const  WarehouseMovements = [
         usuario: 5
     },
     {
-        id: 31,
+        id: 32,
         folio: "87KDÑKMSL",
         concepto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu nibh quis eros egestas tempus ac id dolor. Praesent est tortor, ultricies sed rhoncus vitae, porttitor sit amet lectus.",
         total_costo: 453.20,
@@ -91,7 +91,7 @@ const  WarehouseMovements = [
         usuario: 6
     },
     {
-        id: 32,
+        id: 33,
         folio: "8MLKSM4KFM4",
         concepto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu nibh quis eros egestas tempus ac id dolor. Praesent est tortor, ultricies sed rhoncus vitae, porttitor sit amet lectus.",
         total_costo: 110.50,
@@ -100,7 +100,7 @@ const  WarehouseMovements = [
         usuario: 6
     },
     {
-        id: 33,
+        id: 34,
         folio: "873KLÑFM",
         concepto: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec eu nibh quis eros egestas tempus ac id dolor. Praesent est tortor, ultricies sed rhoncus vitae, porttitor sit amet lectus.",
         total_costo: 245.50,

@@ -21,6 +21,8 @@ const Orders = () => {
     <Spinner text="Cargando Ordenes..."/>
   );
 
+  
+
   return (
     <div>
         <h1 className="text-4xl font-black">Ordenes</h1>
@@ -28,14 +30,14 @@ const Orders = () => {
           Administra las Ordenes desde aquí.
         </p>
 
-        {data.data.data.length === 0 ? (
+        {data?.data?.data?.length === 0 ? (
           <h1 className='text-2xl text-slate-700 font-bold uppercase text-center'>No hay Ordenes Aún</h1>
         ) :(
           <div className='grid grid-cols-2 gap-3'>
-              {data.data.data.map(order => (
+              {data?.data?.data?.map(order => (
                 <div key={order.id} className="p-5 bg-white space-y-2 shadow-md border-b">
                   <p className='text-xl font-bold text-slate-600'>Contenido del Pedido</p>
-                  {order.products.map(product => (
+                  {order?.products?.map(product => (
                     <div
                       key={product.id}
                       className="border-b border-b-slate-200 last-of-type:boder-none py-4"

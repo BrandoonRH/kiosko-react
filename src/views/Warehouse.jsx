@@ -1,3 +1,5 @@
+import jsPDF from 'jspdf';
+import 'jspdf-autotable';
 import { Link } from "react-router-dom"
 import WarehouseMovements from "../data/WarehouseMovements"
 import WarehouseMovement from "../components/WarehouseMovement"
@@ -9,7 +11,21 @@ import {HiOutlineClipboardList, HiOutlineChevronDoubleRight} from "react-icons/h
 const Warehouse = () => {
 
    //TODO Logica de la API
+
+
+   const downloadPDF = () => {
+    const doc = new jsPDF();
   
+    const table = document.getElementById('tableWarehouse'); // Reemplaza 'tableId' con el ID de tu tabla
+    doc.autoTable({ html: table });
+    doc.save('table.pdf');
+  };
+  const downloadPDFDetalles = () => {
+    const doc = new jsPDF();
+    const table = document.getElementById('tableWarehouseDetalles'); // Reemplaza 'tableId' con el ID de tu tabla
+    doc.autoTable({ html: table });
+    doc.save('Almacén.pdf');
+  };
 
   return (
     <div>
@@ -25,9 +41,15 @@ const Warehouse = () => {
           <HiOutlineChevronDoubleRight/>
         </Link>
 
+        <button onClick={downloadPDF} 
+            className="text-2xl my-5 flex m-auto  bg-gray-500 p-2 text-white font-bold rounded-lg hover:bg-gray-200  hover:text-black transition-all duration-300 " 
+            >
+              Descargar PDF
+        </button>
+
         {/*Movimientos  Almacén*/}
         <div className="container mx-auto border border-red-500 p-10">
-              <div className='mx-auto w-11/12 flex justify-around p-5 border border-black'>
+              <div className='mx-auto w-11/12 flex justify-around p-5 border bg-indigo-500 text-white rounded-lg border-black'>
                   <p className='text-2xl font-semibold'>Movimientos del almacén</p>
                   <Link to="/admin/create/movement-warehouse">
                       <Add/>
@@ -35,7 +57,7 @@ const Warehouse = () => {
               </div>
 
               <div className=" mt-7 overflow-auto h-96  bg-gray-100 p-3 border border-gray-500">
-              <table className="border-collapse border border-slate-500 w-full">
+              <table className="border-collapse border border-slate-500 w-full" id="tableWarehouse">
                     <thead>
                       <tr>
                         <th className="border border-slate-600 bg-gray-300">ID</th>
@@ -72,16 +94,21 @@ const Warehouse = () => {
 
 
         {/*Movimientos Detalles Almacén*/}
+       
         <div className="container mx-auto border border-red-500 p-10">
-              <div className='mx-auto w-11/12 flex justify-around p-5 border border-black'>
+              <div className='mx-auto w-11/12 flex justify-around p-5 border bg-indigo-500 text-white rounded-lg border-black'>
                   <p className='text-2xl font-semibold'>Detalles movimientos del almacén</p>
-                  <Link to="/admin/create/detailed-movement">
-                      <Add/>
-                  </Link >
+               
               </div>
 
+              <button onClick={downloadPDFDetalles} 
+              className="text-2xl my-5 flex m-auto  bg-gray-500 p-2 text-white font-bold rounded-lg hover:bg-gray-200  hover:text-black transition-all duration-300 " 
+              >
+                  Descargar PDF
+              </button>
+
               <div className=" mt-7 overflow-auto h-96  bg-gray-100 p-3 border border-gray-500">
-              <table className="border-collapse border border-slate-500 w-full">
+              <table className="border-collapse border border-slate-500 w-full" id="tableWarehouseDetalles">
                     <thead>
                       <tr>
                         <th className="border border-slate-600 bg-gray-300">Id</th>
